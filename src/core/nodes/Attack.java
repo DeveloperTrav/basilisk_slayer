@@ -10,7 +10,7 @@ public class Attack extends TaskNode {
 
     @Override
     public boolean accept() {
-//        log("Attack: " + canAttack());
+        log("Attack: " + canAttack());
         return canAttack();
     }
 

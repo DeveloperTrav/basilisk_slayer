@@ -9,7 +9,7 @@ public class Eat extends TaskNode {
 
     @Override
     public boolean accept() {
-//        log("Eat: " + canEat());
+        log("Eat: " + canEat());
         return canEat();
     }
 

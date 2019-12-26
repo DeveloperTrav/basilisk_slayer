@@ -7,7 +7,7 @@ public class Sip extends TaskNode {
 
     @Override
     public boolean accept() {
-//        log("Sip: " + canSip());
+        log("Sip: " + canSip());
         return canSip();
     }
 

@@ -9,7 +9,7 @@ public class API {
 
     public API(MethodContext context) { API.context = context; }
 
-    public static int sleepUntil() { return (int)Calculations.nextGaussianRandom(7000, 25000); }
+    public static int sleepUntil() { return (int)Calculations.nextGaussianRandom(5000, 2500); }
     public static int sleep() { return (int)Calculations.nextGaussianRandom(400, 150); }
 
     public static boolean inBankArea() { return Areas.bank.contains(context.getLocalPlayer()); }

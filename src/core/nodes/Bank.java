@@ -9,7 +9,7 @@ public class Bank extends TaskNode {
 
     @Override
     public boolean accept() {
-//        log("Bank: " + canBank());
+        log("Bank: " + canBank());
         return canBank();
     }
 
@@ -23,7 +23,7 @@ public class Bank extends TaskNode {
             }
 
             if (getBank().isOpen()) {
-                if (!getInventory().isEmpty()) {
+                if (!getInventory().isEmpty() && !getInventory().contains("Camelot teleport")) {
                     API.status = "Depositing items...";
                     getBank().depositAllItems();
                     sleepUntil(() -> getInventory().isEmpty(), API.sleepUntil());
@@ -47,7 +47,6 @@ public class Bank extends TaskNode {
                     sleepUntil(() -> getInventory().contains("Lobster"), API.sleepUntil());
                 }
             }
-
         }
 
         if (API.inDungeonArea()) {
@@ -62,6 +61,7 @@ public class Bank extends TaskNode {
             API.status = "Walking to bank...";
             if (getWalking().shouldWalk(Calculations.random(4, 7)) && !getLocalPlayer().isAnimating()) {
                 getWalking().walk(Areas.bank.getCenter().getRandomizedTile(3));
+                sleep(2000, 2500);
             }
         }
 

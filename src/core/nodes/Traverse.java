@@ -9,15 +9,21 @@ public class Traverse extends TaskNode {
 
     @Override
     public boolean accept() {
-//        log("Traverse: " + canTraverse());
+        log("Traverse: " + canTraverse());
         return canTraverse();
     }
 
     @Override
     public int execute() {
+        if (getBank().isOpen()) {
+            getBank().close();
+            sleepUntil(() -> !getBank().isOpen(), API.sleepUntil());
+        }
+
         if (getWalking().shouldWalk(Calculations.random(4, 7))) {
             API.status = "Walking to basilisk...";
             getWalking().walk(Areas.basilisk.getCenter().getRandomizedTile(4));
+            sleep(2000, 3000);
         }
 
         return API.sleep();

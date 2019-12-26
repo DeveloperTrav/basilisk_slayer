@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="basilisk_slayer:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32d3789-08e6-4835-9619-4c0ee11a24c9" name="Default Changelist" comment="" />
+    <list default="true" id="a32d3789-08e6-4835-9619-4c0ee11a24c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/basilisk_slayer_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/nodes/Attack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/nodes/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/nodes/Eat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/nodes/Sip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/nodes/Traverse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Areas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Areas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/nodes/BankNode.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +33,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VOVNGLn4P0KfAnl8L1j0scGAQZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,13 +45,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/DreamBot/BotData/client.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$USER_HOME$/DreamBot/Scripts" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -53,7 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1577124089118</updated>
       <workItem from="1577124095643" duration="316000" />
-      <workItem from="1577126278099" duration="6759000" />
+      <workItem from="1577126278099" duration="14710000" />
+      <workItem from="1577379563184" duration="11895000" />
     </task>
     <servers />
   </component>
@@ -61,18 +86,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1577127649484">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1577394903381">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577127649484" />
-    <state x="687" y="329" key="FileChooserDialogImpl" timestamp="1577124312309">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577394903381" />
+    <state x="711" y="371" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1577395926280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="687" y="329" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577124312309" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1577124319302">
+    <state x="711" y="371" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577395926280" />
+    <state x="711" y="342" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1577396007931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577124319302" />
+    <state x="711" y="342" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577396007931" />
+    <state x="687" y="329" key="FileChooserDialogImpl" timestamp="1577396173254">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="687" y="329" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577396173254" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1577396175285">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577396175285" />
+    <state x="690" y="285" key="extract.method.dialog" timestamp="1577395131301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="285" key="extract.method.dialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577395131301" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1577128097297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

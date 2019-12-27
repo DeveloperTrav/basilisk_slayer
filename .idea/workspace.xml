@@ -7,15 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a32d3789-08e6-4835-9619-4c0ee11a24c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/basilisk_slayer_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/basilisk_slayer_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Traverse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Traverse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/API.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/nodes/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Attack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/nodes/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/nodes/Eat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Eat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/nodes/Sip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Sip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Areas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Areas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/nodes/Traverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Traverse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +69,8 @@
       <updated>1577124089118</updated>
       <workItem from="1577124095643" duration="316000" />
       <workItem from="1577126278099" duration="14710000" />
-      <workItem from="1577379563184" duration="13459000" />
+      <workItem from="1577379563184" duration="13660000" />
+      <workItem from="1577408765760" duration="2911000" />
     </task>
     <servers />
   </component>

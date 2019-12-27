@@ -9,6 +9,11 @@ import org.dreambot.api.wrappers.interactive.NPC;
 public class Attack extends TaskNode {
 
     @Override
+    public int priority() {
+        return 3;
+    }
+
+    @Override
     public boolean accept() {
         log("Attack: " + canAttack());
         return canAttack();

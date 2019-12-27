@@ -3,9 +3,15 @@ package core.nodes;
 import core.API;
 import core.Areas;
 import org.dreambot.api.methods.Calculations;
+import org.dreambot.api.methods.tabs.Tab;
 import org.dreambot.api.script.TaskNode;
 
 public class Bank extends TaskNode {
+
+    @Override
+    public int priority() {
+        return 4;
+    }
 
     @Override
     public boolean accept() {
@@ -29,16 +35,16 @@ public class Bank extends TaskNode {
                     sleepUntil(() -> getInventory().isEmpty(), API.sleepUntil());
                 }
 
+                if (!getEquipment().contains("Mirror shield")) {
+                    API.status = "Getting mirror shield...";
+                    getBank().withdraw("Mirror shield", 1);
+                    sleepUntil(() -> getInventory().contains("Mirror shield"), API.sleepUntil());
+                }
+
                 if (!getInventory().contains("Camelot teleport")) {
                     API.status = "Getting teleport...";
                     getBank().withdraw("Camelot teleport", 1);
                     sleepUntil(() -> getInventory().contains("Camelot teleport"), API.sleepUntil());
-                }
-
-                if (!getInventory().contains("Superantipoison")) {
-                    API.status = "Getting potion...";
-                    getBank().withdraw("Superantipoison(4)", 3);
-                    sleepUntil(() -> getInventory().contains("Superantipoison"), API.sleepUntil());
                 }
 
                 if (!getInventory().contains("Lobster")) {
@@ -50,10 +56,14 @@ public class Bank extends TaskNode {
         }
 
         if (API.inDungeonArea()) {
-            if (getInventory().contains("Camelot teleport")) {
-                API.status = "Using teleport...";
-                getInventory().get("Camelot teleport").interact("Break");
-                sleepUntil(() -> !API.inBasiliskArea(), API.sleepUntil());
+            if (getTabs().isOpen(Tab.INVENTORY)) {
+                if (getInventory().contains("Camelot teleport")) {
+                    API.status = "Using teleport...";
+                    getInventory().get("Camelot teleport").interact("Break");
+                    sleepUntil(() -> !API.inBasiliskArea(), API.sleepUntil());
+                }
+            } else {
+                getTabs().openWithMouse(Tab.INVENTORY);
             }
         }
 
@@ -69,6 +79,6 @@ public class Bank extends TaskNode {
     }
 
     private boolean canBank() {
-        return !getInventory().contains("Lobster");
+        return !getInventory().contains("Lobster") || !getInventory().contains("Camelot teleport");
     }
 }

@@ -12,7 +12,7 @@ public class Traverse extends TaskNode {
 
     @Override
     public int priority() {
-        return 5;
+        return 1;
     }
 
     @Override

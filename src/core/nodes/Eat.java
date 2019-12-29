@@ -10,7 +10,7 @@ public class Eat extends TaskNode {
 
     @Override
     public int priority() {
-        return 1;
+        return 5;
     }
 
     @Override

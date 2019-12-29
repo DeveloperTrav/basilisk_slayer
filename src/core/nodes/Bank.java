@@ -3,6 +3,7 @@ package core.nodes;
 import core.API;
 import core.Areas;
 import org.dreambot.api.methods.Calculations;
+import org.dreambot.api.methods.skills.Skill;
 import org.dreambot.api.methods.tabs.Tab;
 import org.dreambot.api.script.TaskNode;
 
@@ -10,7 +11,7 @@ public class Bank extends TaskNode {
 
     @Override
     public int priority() {
-        return 4;
+        return 3;
     }
 
     @Override
@@ -26,6 +27,12 @@ public class Bank extends TaskNode {
                 API.status = "Opening bank...";
                 getBank().openClosest();
                 sleepUntil(() -> getBank().isOpen(), API.sleepUntil());
+            }
+
+            if (!getWalking().isRunEnabled()) {
+                API.status = "Turning on run...";
+                getWalking().toggleRun();
+                sleepUntil(() -> getWalking().isRunEnabled(), API.sleepUntil());
             }
 
             if (getBank().isOpen()) {
@@ -49,13 +56,13 @@ public class Bank extends TaskNode {
 
                 if (!getInventory().contains("Lobster")) {
                     API.status = "Getting food...";
-                    getBank().withdraw("Lobster", 20);
+                    getBank().withdraw("Lobster", 7);
                     sleepUntil(() -> getInventory().contains("Lobster"), API.sleepUntil());
                 }
             }
         }
 
-        if (API.inDungeonArea()) {
+        if (API.inDungeonArea() && getSkills().getBoostedLevels(Skill.HITPOINTS) <= 60) {
             if (getTabs().isOpen(Tab.INVENTORY)) {
                 if (getInventory().contains("Camelot teleport")) {
                     API.status = "Using teleport...";
@@ -79,6 +86,6 @@ public class Bank extends TaskNode {
     }
 
     private boolean canBank() {
-        return !getInventory().contains("Lobster") || !getInventory().contains("Camelot teleport");
+        return !getInventory().contains("Lobster") || !getInventory().contains("Camelot teleport") || getInventory().isFull();
     }
 }

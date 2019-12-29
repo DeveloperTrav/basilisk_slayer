@@ -3,9 +3,6 @@ package core;
 import org.dreambot.api.methods.Calculations;
 import org.dreambot.api.methods.MethodContext;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class API {
     public static String status = "Script starting...";
     private static MethodContext context;
@@ -20,9 +17,9 @@ public class API {
     public static boolean inDungeonArea() { return Areas.dungeon.contains(context.getLocalPlayer()); }
     public static boolean inDungeonEntranceArea() { return Areas.dungeonEntrance.contains(context.getLocalPlayer()); }
 
-    public static List<String> getPickupItems() {
-        return Arrays.asList("Adamant full helm", "Mithril kiteshield", "Rune dagger", "Mystic hat (light)", "Nature rune", "Grimy ranarr weed", "Grimy avantoe",
-                "Grimy kwuarm", "Grimy cadantine", "Grimy lantadyme", "coins", "Adamantite ore", "Uncut ruby", "Uncut diamond", "Loop half of key",
-                "Tooth half of key", "Rune javelin", "Rune spear", "Shield left half", "Dragon spear");
+    public static String[] getPickupItems() {
+        return new String[] {"Adamant full helm", "Mithril kiteshield", "Rune dagger", "Mystic hat (light)", "Nature rune", "Grimy ranarr weed", "Grimy avantoe",
+                "Grimy kwuarm", "Grimy cadantine", "Grimy lantadyme", "Coins", "Adamantite ore", "Uncut ruby", "Uncut diamond", "Loop half of key",
+                "Tooth half of key", "Rune javelin", "Rune spear", "Shield left half", "Dragon spear"};
     }
 }

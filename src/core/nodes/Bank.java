@@ -29,12 +29,6 @@ public class Bank extends TaskNode {
                 sleepUntil(() -> getBank().isOpen(), API.sleepUntil());
             }
 
-            if (!getWalking().isRunEnabled()) {
-                API.status = "Turning on run...";
-                getWalking().toggleRun();
-                sleepUntil(() -> getWalking().isRunEnabled(), API.sleepUntil());
-            }
-
             if (getBank().isOpen()) {
                 if (!getInventory().isEmpty() && !getInventory().contains("Camelot teleport")) {
                     API.status = "Depositing items...";
@@ -56,13 +50,13 @@ public class Bank extends TaskNode {
 
                 if (!getInventory().contains("Lobster")) {
                     API.status = "Getting food...";
-                    getBank().withdraw("Lobster", 7);
+                    getBank().withdraw("Lobster", 12);
                     sleepUntil(() -> getInventory().contains("Lobster"), API.sleepUntil());
                 }
             }
         }
 
-        if (API.inDungeonArea() && getSkills().getBoostedLevels(Skill.HITPOINTS) <= 60) {
+        if (API.inDungeonArea() && !getInventory().contains("Lobster")) {
             if (getTabs().isOpen(Tab.INVENTORY)) {
                 if (getInventory().contains("Camelot teleport")) {
                     API.status = "Using teleport...";
@@ -86,6 +80,6 @@ public class Bank extends TaskNode {
     }
 
     private boolean canBank() {
-        return !getInventory().contains("Lobster") || !getInventory().contains("Camelot teleport") || getInventory().isFull();
+        return !getInventory().contains("Lobster") || !getInventory().contains("Camelot teleport");
     }
 }

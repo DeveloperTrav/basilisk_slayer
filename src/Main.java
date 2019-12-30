@@ -6,21 +6,21 @@ import org.dreambot.api.methods.walking.web.node.impl.BasicWebNode;
 import org.dreambot.api.script.Category;
 import org.dreambot.api.script.ScriptManifest;
 import org.dreambot.api.script.impl.TaskScript;
+import org.dreambot.api.utilities.Timer;
 
 import java.awt.*;
 
 @ScriptManifest(category = Category.COMBAT, name = "Basilisk Slayer", description = "Kills the things", author = "NotJohn", version = 1.0)
 public class Main extends TaskScript {
+    private final Timer timer = new Timer();
 
     private final API api = new API(this);
      public void onStart() {
-         log("=============================");
          addNodes(new Bank());
          addNodes(new Eat());
          addNodes(new Pickup());
          addNodes(new Attack());
          addNodes(new Traverse());
-         log("=============================");
 
          BasicWebNode bwn1 = new BasicWebNode(2805, 10001);
          BasicWebNode bwn2 = new BasicWebNode(2797, 9996);
@@ -116,5 +116,6 @@ public class Main extends TaskScript {
 
     public void onPaint(Graphics2D g) {
         g.drawString("Status: " + API.status, 10, 30);
+        g.drawString("RunTime: " + Timer.formatTime(this.timer.elapsed()), 10, 45);
     }
 }

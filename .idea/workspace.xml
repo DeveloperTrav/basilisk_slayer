@@ -8,12 +8,18 @@
   <component name="ChangeListManager">
     <list default="true" id="a32d3789-08e6-4835-9619-4c0ee11a24c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basilisk_slayer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basilisk_slayer/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basilisk_slayer/core/API.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basilisk_slayer/core/API.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basilisk_slayer/core/Areas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basilisk_slayer/core/Areas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Attack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Attack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Bank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Pickup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basilisk_slayer/core/nodes/Pickup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Areas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Areas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/nodes/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Attack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/nodes/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/nodes/Eat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Eat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/nodes/Pickup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Pickup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/nodes/Traverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/nodes/Traverse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +86,8 @@
       <workItem from="1577408765760" duration="3147000" />
       <workItem from="1577413961587" duration="863000" />
       <workItem from="1577414842573" duration="9620000" />
-      <workItem from="1577642820787" duration="11957000" />
+      <workItem from="1577642820787" duration="20919000" />
+      <workItem from="1577720366942" duration="1088000" />
     </task>
     <servers />
   </component>
@@ -116,6 +123,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="285" key="extract.method.dialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577395131301" />
+    <state x="342" y="140" key="new project wizard" timestamp="1577721462815">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577721462815" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1577650367907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -2,8 +2,11 @@ package core.nodes;
 
 import core.API;
 import core.Areas;
+import org.dreambot.api.methods.skills.Skill;
 import org.dreambot.api.script.TaskNode;
 import org.dreambot.api.wrappers.interactive.NPC;
+
+import java.util.Objects;
 
 public class Attack extends TaskNode {
 
@@ -15,13 +18,20 @@ public class Attack extends TaskNode {
     @Override
     public boolean accept() {
         log("Attack: " + canAttack());
+        log("ReAttack: " + canReAttack());
         return canAttack() || canReAttack();
     }
 
     @Override
     public int execute() {
+        if (!getWalking().isRunEnabled()) {
+            API.status = "Turning on run...";
+            getWalking().toggleRun();
+            sleepUntil(() -> getWalking().isRunEnabled(), API.sleepUntil());
+        }
+
         if (!canReAttack()) {
-            NPC target = getNpcs().closest(npc -> npc != null && !npc.isInCombat() && npc.getName().equals("Basilisk") && Areas.basilisk.contains(npc));
+            NPC target = getNpcs().closest(npc -> Objects.nonNull(npc) && !npc.isInCombat() && npc.getName().equals("Basilisk") && Areas.basilisk.contains(npc));
 
         if (getMap().canReach(target.getTile())) {
             if (target != null) {
@@ -30,6 +40,10 @@ public class Attack extends TaskNode {
                 target.interact("Attack");
                 sleepUntil(() -> getLocalPlayer().isInCombat(), API.sleepUntil());
             }
+        } else {
+            API.status = "Walking to basilisk...";
+            getWalking().walk(target);
+            sleepUntil(() -> getLocalPlayer().getTile().equals(target.getTile()), API.sleepUntil());
         }
     } else {
         API.status = "Reattacking basilisk...";
@@ -41,7 +55,7 @@ public class Attack extends TaskNode {
     }
 
     private boolean canAttack() {
-        return !getLocalPlayer().isInCombat() && API.inBasiliskArea() && getInventory().contains("Lobster") && getLocalPlayer().getCharacterInteractingWithMe() == null;
+        return !getLocalPlayer().isInCombat() && API.inBasiliskArea() && getSkills().getBoostedLevels(Skill.HITPOINTS) >= 50 && getLocalPlayer().getCharacterInteractingWithMe() == null;
     }
 
     private boolean canReAttack() {

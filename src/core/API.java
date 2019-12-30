@@ -5,6 +5,7 @@ import org.dreambot.api.methods.MethodContext;
 
 public class API {
     public static String status = "Script starting...";
+    public static int profit = 0;
     private static MethodContext context;
 
     public API(MethodContext context) { API.context = context; }
@@ -19,7 +20,7 @@ public class API {
 
     public static String[] getPickupItems() {
         return new String[] {"Adamant full helm", "Mithril kiteshield", "Rune dagger", "Mystic hat (light)", "Nature rune", "Grimy ranarr weed", "Grimy avantoe",
-                "Grimy kwuarm", "Grimy cadantine", "Grimy lantadyme", "Coins", "Adamantite ore", "Uncut ruby", "Uncut diamond", "Loop half of key",
-                "Tooth half of key", "Rune javelin", "Rune spear", "Shield left half", "Dragon spear"};
+                "Grimy kwuarm", "Grimy cadantine", "Grimy lantadyme", "Coins", "Adamantite ore", "Uncut ruby", "Uncut emerald", "Uncut diamond", "Loop half of key",
+                "Tooth half of key", "Rune javelin", "Rune spear", "Shield left half", "Dragon spear", "Grimy harralander", "Mithril spear", "Grimy irit leaf", "Grimy dwarf weed"};
     }
 }
